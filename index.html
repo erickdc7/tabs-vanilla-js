@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>How to Create Tabs using HTML CSS and Vanilla JavaScript</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="icon">
+            <div class="iconBx active" data-id="content1">
+                <img src="1.png">
+            </div>
+            <div class="iconBx" data-id="content2">
+                <img src="2.png">
+            </div>
+            <div class="iconBx" data-id="content3">
+                <img src="3.png">
+            </div>
+            <div class="iconBx" data-id="content4">
+                <img src="4.png">
+            </div>
+        </div>
+        <div class="content">
+            <div class="contentBx active" id="content1">
+                <div>
+                    <div class="text">
+                        <h2>Google</h2>
+                        <p>
+                            Google, LLC es una compañía principal subsidiaria de la estadounidense Alphabet cuya
+                            especialización son los productos y servicios relacionados con internet, software,
+                            dispositivos electrónicos y otras tecnologías.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content2">
+                <div>
+                    <div class="text">
+                        <h2>Facebook</h2>
+                        <p>
+                            Meta Platforms, Inc., cuyo nombre comercial es Meta, es un conglomerado estadounidense de
+                            tecnología y redes sociales con sede en Menlo Park, California.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content3">
+                <div>
+                    <div class="text">
+                        <h2>Twitter</h2>
+                        <p>
+                            Twitter un servicio de microblogueo, con sede en San Francisco, California, Estados
+                            Unidos, con filiales en San Antonio y Boston en Estados Unidos. Twitter, Inc. fue creado
+                            originalmente en California, pero está bajo la jurisdicción de Delaware desde 2007.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content4">
+                <div>
+                    <div class="text">
+                        <h2>Yahoo!</h2>
+                        <p>
+                            Yahoo! es una empresa de medios con sede en Estados Unidos que posee un portal de Internet,
+                            un directorio web y una serie de servicios tales como el popular correo electrónico Yahoo!
+                            Su propósito es "ser el servicio global de Internet más esencial para consumidores y
+                            negocios".
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var iconBx = document.querySelectorAll('.iconBx');
+        var contentBx = document.querySelectorAll('.contentBx');
+
+        for (var i = 0; i < iconBx.length; i++) {
+            iconBx[i].addEventListener('mouseover', function () {
+                for (var i = 0; i < contentBx.length; i++) {
+                    contentBx[i].className = 'contentBx';
+                }
+                document.getElementById(this.dataset.id).className = 'contentBx active';
+
+                for (var i = 0; i < iconBx.length; i++) {
+                    iconBx[i].className = 'iconBx';
+                }
+                this.className = 'iconBx active';
+            });
+        }
+    </script>
+</body>
+
+</html>
