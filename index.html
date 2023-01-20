@@ -6,23 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>How to Create Tabs using HTML CSS and Vanilla JavaScript</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Tabs</title>
 </head>
 
 <body>
     <div class="container">
         <div class="icon">
             <div class="iconBx active" data-id="content1">
-                <img src="1.png">
+                <img src="1.png" alt="logo-social">
             </div>
             <div class="iconBx" data-id="content2">
-                <img src="2.png">
+                <img src="2.png" alt="logo-social">
             </div>
             <div class="iconBx" data-id="content3">
-                <img src="3.png">
+                <img src="3.png" alt="logo-social">
             </div>
             <div class="iconBx" data-id="content4">
-                <img src="4.png">
+                <img src="4.png" alt="logo-social">
             </div>
         </div>
         <div class="content">
@@ -78,19 +79,21 @@
     </div>
 
     <script>
-        var iconBx = document.querySelectorAll('.iconBx');
-        var contentBx = document.querySelectorAll('.contentBx');
+        let iconBx = document.querySelectorAll('.iconBx'),
+            contentBx = document.querySelectorAll('.contentBx');
 
-        for (var i = 0; i < iconBx.length; i++) {
+        for (let i = 0; i < iconBx.length; i++) {
             iconBx[i].addEventListener('mouseover', function () {
-                for (var i = 0; i < contentBx.length; i++) {
+                for (let i = 0; i < contentBx.length; i++) {
                     contentBx[i].className = 'contentBx';
                 }
+
                 document.getElementById(this.dataset.id).className = 'contentBx active';
 
-                for (var i = 0; i < iconBx.length; i++) {
+                for (let i = 0; i < iconBx.length; i++) {
                     iconBx[i].className = 'iconBx';
                 }
+
                 this.className = 'iconBx active';
             });
         }

@@ -90,3 +90,55 @@ body {
 .content .contentBx h2 {
   font-size: 3em;
 }
+
+@media screen and (max-width: 780px) {
+  body {
+    /* overflow: hidden; */
+    min-height: 80vh;
+  }
+
+  .container .icon {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    overflow: initial;
+  }
+
+  .content .contentBx {
+    width: initial;
+  }
+
+  .content .contentBx.active {
+    padding: 100px 30px 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container .icon {
+    flex-direction: column;
+    margin-bottom: 100px;
+    row-gap: 1rem;
+  }
+
+  .container .icon .iconBx {
+    width: 250px;
+    margin: initial;
+    padding: initial;
+    height: 140px;
+    padding: 20px;
+  }
+
+  .container .icon .iconBx.active img {
+    transform: scale(0.8);
+  }
+
+  .content .contentBx.active {
+    padding: 100px 30px 100px;
+  }
+}
