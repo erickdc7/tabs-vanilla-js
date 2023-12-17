@@ -1,4 +1,4 @@
-# Tabs using HTML CSS and Vanilla JavaScript
-### This design belongs to [Online Tutorials](https://www.youtube.com/@OnlineTutorialsYT), you can see the video [here](https://youtu.be/1e7dAyEDe3o).
+# Tabs
+### This design is inspired by the work of [Online Tutorials](https://www.youtube.com/@OnlineTutorialsYT). Click [here](https://youtu.be/1e7dAyEDe3o) to watch the video.
 
 ![preview img](/preview.png)
